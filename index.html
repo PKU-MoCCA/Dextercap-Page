@@ -129,6 +129,24 @@
   </div>
 </section>
 
+<!-- Video -->
+<section class="hero ">
+  <div class="hero-body">
+    <div class="carousel-item active">
+      <div class="column is-centered has-text-centered">
+
+        <video poster="" id="steve"  controls muted  height="80%" width="80%">
+          <source src="static/figures/video.mp4" type="video/mp4">
+        </video>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
 <!-- Abstract -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
@@ -163,133 +181,139 @@
 </section>
 
 
-
-<section class="hero is-small">
-  <div class="hero-body">
+<!-- Pipeline -->
+<section class="section" id="system-pipeline">
+  <div class="container is-max-desktop">
     <div class="column is-centered has-text-centered">
-    <h3 class="title is-4">Gallary</h3>
-
-<!-- 
-    <div id="results-carousel" class="carousel results-carousel">
-        
-      <div class="column is-centered has-text-centered">
-        <video poster="" id="tree" muted controls width=300>
-          <source src="static/figures/gallery/cuboid_00_render.mp4" type="video/mp4">
-        </video>
-        <p>Cuboid 0</p>
-        <video poster="" id="tree"  controls width=300>
-          <source src="static/figures/gallery/cuboid_01_render.mp4" type="video/mp4">
-        </video>
-        <p>Cuboid 1</p>
-        </br>
-      </div>
-
-      <div class="column is-centered has-text-centered">
-        <video poster="" id="tree" muted controls width=300>
-          <source src="static/figures/gallery/cuboid_02_render.mp4" type="video/mp4">
-        </video>
-        <p>Cuboid 2</p>
-        <video poster="" id="tree"  controls width=300>
-          <source src="static/figures/gallery/cylinder_render.mp4" type="video/mp4">
-        </video>
-        <p>Cylinder</p>
-        </br>
-      </div>
-
-      <div class="column is-centered has-text-centered">
-        <video poster="" id="tree" muted controls width=300>
-          <source src="static/figures/gallery/plate_render.mp4" type="video/mp4">
-        </video>
-        <p>Plate</p>
-        <video poster="" id="tree"  controls width=300>
-          <source src="static/figures/gallery/prism_render.mp4" type="video/mp4">
-        </video>
-        <p>Prism</p>
-        </br>
-      </div>
-
-      <div class="column is-centered has-text-centered">
-        <video poster="" id="tree" muted controls width=300>
-          <source src="static/figures/gallery/ring_render.mp4" type="video/mp4">
-        </video>
-        <p>Ring</p>
-        <video poster="" id="tree"  controls width=300>
-          <source src="static/figures/gallery/rubikscube_render.mp4" type="video/mp4">
-        </video>
-        <p>Rubik’s Cube</p>
-        </br>
-      </div>
-
+      <h3 class="title">System Pipeline</h3>
     </div>
-     -->
-
-    <div class="columns is-centered" style="margin: 0; gap: 100px;">
-      <div class="column is-narrow has-text-centered" style="padding: 0;">
-        <video id="matting-video" autoplay loop controls width=300>
-          <source src="static/figures/gallery/cuboid_00_render.mp4" type="video/mp4">
-        </video>
-        <p>Cuboid 0</p>
-      </div>      
-
-      <div class="column is-narrow has-text-centered" style="padding: 0;">        
-        <video id="matting-video" autoplay loop controls width=300>
-          <source src="static/figures/gallery/cuboid_01_render.mp4" type="video/mp4">
-        </video>
-        <p>Cuboid 1</p>
+    
+    <!-- Part 1: Images -->
+    <div class="content">
+      <h3 class="subtitle">1. Video Processing</h3>
+      <div class="columns is-multiline is-centered">
+        <div class="column is-half-tablet is-one-quarter-desktop has-text-centered">
+          <figure style="display: inline-block; margin: 0;">
+            <img src="static/figures/system/raw.png" style="height: 140px; width: auto !important; max-width: none !important; display: block; margin: 0 auto;">
+            <figcaption style="text-align: center;">a. Raw Video</figcaption>
+          </figure>
+        </div>
+        <div class="column is-half-tablet is-one-quarter-desktop has-text-centered">
+          <figure style="display: inline-block; margin: 0;">
+            <img src="static/figures/system/corner.png" style="height: 140px; width: auto !important; max-width: none !important; display: block; margin: 0 auto;">
+            <figcaption style="text-align: center;">b. Corner Detection</figcaption>
+          </figure>
+        </div>
+        <div class="column is-half-tablet is-one-quarter-desktop has-text-centered">
+          <figure style="display: inline-block; margin: 0;">
+            <img src="static/figures/system/edge.png" style="height: 140px; width: auto !important; max-width: none !important; display: block; margin: 0 auto;">
+            <figcaption style="text-align: center;">c. Edge Classification</figcaption>
+          </figure>
+        </div>
+        <div class="column is-half-tablet is-one-quarter-desktop has-text-centered">
+          <figure style="display: inline-block; margin: 0;">
+            <img src="static/figures/system/block.png" style="height: 140px; width: auto !important; max-width: none !important; display: block; margin: 0 auto;">
+            <figcaption style="text-align: center;">d. Block Recognition</figcaption>
+          </figure>
+        </div>
       </div>
     </div>
-
-    <div class="columns is-centered" style="margin: 0; gap: 100px;">
-      <div class="column is-narrow has-text-centered" style="padding: 0;">
-        <video id="matting-video" autoplay loop controls width=300>
-          <source src="static/figures/gallery/cuboid_02_render.mp4" type="video/mp4">
-        </video>
-        <p>Cuboid 2</p>
-      </div>      
-
-      <div class="column is-narrow has-text-centered" style="padding: 0;">        
-        <video id="matting-video" autoplay loop controls width=300>
-          <source src="static/figures/gallery/cylinder_render.mp4" type="video/mp4">
-        </video>
-        <p>Cylinder</p>
+    <!-- Part 2: Videos -->
+    <div class="content" style="margin-top: 2em;">
+      <h3 class="subtitle">2. Hand and Object Reconstruction</h3>
+      <div class="columns is-centered">
+        <div class="column is-half has-text-centered">
+          <video controls  width="400" style="max-width: 100%;">
+            <source src="static/figures/system/hand-reconstruction.mp4" type="video/mp4">
+          </video>
+          <div>Hand Reconstruction</div>
+        </div>
+        <div class="column is-half has-text-centered">
+          <video controls  width="400" style="max-width: 100%;">
+            <source src="static/figures/system/rubikscube_reconstruction.mp4" type="video/mp4">
+          </video>
+          <div>Object Reconstruction</div>
+        </div>
       </div>
     </div>
-
-    <div class="columns is-centered" style="margin: 0; gap: 100px;">
-      <div class="column is-narrow has-text-centered" style="padding: 0;">
-        <video id="matting-video" autoplay loop controls width=300>
-          <source src="static/figures/gallery/plate_render.mp4" type="video/mp4">
-        </video>
-        <p>Plate</p>
-      </div>      
-
-      <div class="column is-narrow has-text-centered" style="padding: 0;">        
-        <video id="matting-video" autoplay loop controls width=300>
-          <source src="static/figures/gallery/prism_render.mp4" type="video/mp4">
-        </video>
-        <p>Prism</p>
-      </div>
-    </div>
-
-    <div class="columns is-centered" style="margin: 0; gap: 100px;">
-      <div class="column is-narrow has-text-centered" style="padding: 0;">
-        <video id="matting-video" autoplay loop controls width=300>
-          <source src="static/figures/gallery/ring_render.mp4" type="video/mp4">
-        </video>
-        <p>Ring</p>
-      </div>      
-
-      <div class="column is-narrow has-text-centered" style="padding: 0;">        
-        <video id="matting-video" autoplay loop controls width=300>
-          <source src="static/figures/gallery/rubikscube_render.mp4" type="video/mp4">
-        </video>
-        <p>Rubik’s Cube</p>
-      </div>
-    </div>
-</div>
+  </div>
 </section>
 
 
+<!-- Gallery -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="column is-centered has-text-centered">
+    <h3 class="title">Gallary</h3>
+
+    <div class="columns is-centered" style="margin: 0; gap: 100px;">
+      <div class="column is-narrow has-text-centered" style="padding: 0;">
+        <video id="matting-video" autoplay loop controls width=300>
+          <source src="static/figures/gallery/cuboid_00_render.mp4" type="video/mp4">
+        </video>
+        <p>Cuboid 0</p>
+      </div>      
+
+      <div class="column is-narrow has-text-centered" style="padding: 0;">        
+        <video id="matting-video" autoplay loop controls width=300>
+          <source src="static/figures/gallery/cuboid_01_render.mp4" type="video/mp4">
+        </video>
+        <p>Cuboid 1</p>
+      </div>
+    </div>
+
+    <div class="columns is-centered" style="margin: 0; gap: 100px;">
+      <div class="column is-narrow has-text-centered" style="padding: 0;">
+        <video id="matting-video" autoplay loop controls width=300>
+          <source src="static/figures/gallery/cuboid_02_render.mp4" type="video/mp4">
+        </video>
+        <p>Cuboid 2</p>
+      </div>      
+
+      <div class="column is-narrow has-text-centered" style="padding: 0;">        
+        <video id="matting-video" autoplay loop controls width=300>
+          <source src="static/figures/gallery/cylinder_render.mp4" type="video/mp4">
+        </video>
+        <p>Cylinder</p>
+      </div>
+    </div>
+
+    <div class="columns is-centered" style="margin: 0; gap: 100px;">
+      <div class="column is-narrow has-text-centered" style="padding: 0;">
+        <video id="matting-video" autoplay loop controls width=300>
+          <source src="static/figures/gallery/plate_render.mp4" type="video/mp4">
+        </video>
+        <p>Plate</p>
+      </div>      
+
+      <div class="column is-narrow has-text-centered" style="padding: 0;">        
+        <video id="matting-video" autoplay loop controls width=300>
+          <source src="static/figures/gallery/prism_render.mp4" type="video/mp4">
+        </video>
+        <p>Prism</p>
+      </div>
+    </div>
+
+    <div class="columns is-centered" style="margin: 0; gap: 100px;">
+      <div class="column is-narrow has-text-centered" style="padding: 0;">
+        <video id="matting-video" autoplay loop controls width=300>
+          <source src="static/figures/gallery/ring_render.mp4" type="video/mp4">
+        </video>
+        <p>Ring</p>
+      </div>      
+
+      <div class="column is-narrow has-text-centered" style="padding: 0;">        
+        <video id="matting-video" autoplay loop controls width=300>
+          <source src="static/figures/gallery/rubikscube_render.mp4" type="video/mp4">
+        </video>
+        <p>Rubik’s Cube</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Bibtex -->
 <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
@@ -307,20 +331,8 @@
     </div>
 </section>
 
-
-
-
+<!-- Footer -->
 <footer class="footer">
- <!--  <div class="container">
-    <div class="content has-text-centered">
-      <a class="icon-link"
-      href="https://homes.cs.washington.edu/~kpar/nerfies/figures/nerfies_paper.pdf">
-      <i class="fas fa-file-pdf"></i>
-    </a>
-    <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
-      <i class="fab fa-github"></i>
-    </a>
-  </div> -->
   <div class="columns is-centered">
     <div class="column is-8">
       <div class="content">
@@ -355,5 +367,5 @@
     alt="Web Analytics"></a></div></noscript>
     <!-- End of Statcounter Code -->
 
-  </body>
-  </html>
+</body>
+</html>
